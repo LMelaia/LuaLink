@@ -1,3 +1,5 @@
+## Generic C++ .gitignore from GitHub
+
 # Prerequisites
 *.d
 
@@ -30,3 +32,19 @@
 *.exe
 *.out
 *.app
+
+## Project specific
+
+# Folders
+test-files/
+cmake-build-debug/
+.idea/
+CMakeFiles/
+
+# Files
+cmake_install.cmake
+LuaLink.cbp
+CMakeCache.txt
+Makefile
+LuaLink.exe
+LuaLink.exe.manifest
