@@ -31,6 +31,9 @@ class parameters {
     std::string luaScript;
     std::string luaRuntime;
     
+    bool opensWithCap;
+    bool endsWithCap;
+    
     int state;
   
   public:
@@ -39,7 +42,10 @@ class parameters {
     [[nodiscard]] int getFinalState() const {
         return this->state;
     }
-  
+    
+    bool opensWithCapital() const { return opensWithCap; }
+    bool endsWithCapital() const { return endsWithCap; }
+    
   private:
     int setFromParameters(int argc, char* argv[]);
     int setFromFullAppName(std::string fullAppName);

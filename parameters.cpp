@@ -48,6 +48,10 @@ int parameters::setFromFullAppName(std::string fap) {
     this->setShortAppName(cElement);
     this->setAppName(std::regex_replace(cElement, std::regex(".exe"), ""));
     
+    this->opensWithCap = utils::startsWithCapital(this->shortAppName);
+    this->endsWithCap = utils::endsWithCapital(this->shortAppName);
+    cout << "Opening capital: '" << opensWithCap << "'\tClosing capital: '" << endsWithCap << "'" << endl;
+    
     return 0;
 }
 

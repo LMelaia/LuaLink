@@ -35,3 +35,19 @@ std::string utils::getEnvVar(std::string const & key) {
     char *val = getenv(key.c_str());
     return val == nullptr ? std::string(NULL_STR) : std::string(val);
 }
+
+bool utils::startsWithCapital(const std::string &input) {
+    return isCapital(input[0]);
+}
+
+bool utils::endsWithCapital(const std::string &input) {
+    return isCapital(input.back());
+}
+
+bool utils::isCapital(const char &input) {
+    int capA = (int) 'A', capZ = (int) 'Z';
+    
+    if(input >= capA && input <= capZ)
+        return true;
+    else return false;
+}
