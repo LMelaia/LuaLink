@@ -16,7 +16,8 @@ int main(int length, char **args) {
         code = PARAMETERS->getFinalState();
     else code = (PARAMETERS->getFinalState() != 0 ? PARAMETERS->getFinalState() : utils::getError());
     
-    system("pause");
+    if(!PARAMETERS->endsWithCapital())
+        system("pause");
     
     return code;
 }

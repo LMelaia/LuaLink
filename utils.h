@@ -28,6 +28,9 @@ class utils {
     static std::string combineArgs(int length, char** args);
     static bool stringEndsWith(std::string const & value, std::string const & ending);
     static std::string getEnvVar(std::string const & key);
+    static bool startsWithCapital(const std::string&);
+    static bool endsWithCapital(const std::string&);
+    static bool isCapital(const char &);
     
     static inline int getError() {
         return ERROR_CODE;
