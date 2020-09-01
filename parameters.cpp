@@ -46,7 +46,9 @@ int parameters::setFromFullAppName(std::string fap) {
     
     this->setPath(cPath);
     this->setShortAppName(cElement);
-    this->setAppName(std::regex_replace(cElement, std::regex(".exe"), ""));
+    this->setAppName(std::regex_replace(
+        cElement, std::regex(".exe", std::regex_constants::icase), ""
+    ));
     
     this->opensWithCap = utils::startsWithCapital(this->shortAppName);
     this->endsWithCap = utils::endsWithCapital(this->shortAppName);
